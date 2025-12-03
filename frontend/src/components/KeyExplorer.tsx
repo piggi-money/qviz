@@ -55,8 +55,8 @@ export function KeyExplorer({ connection, keysByType }: KeyExplorerProps) {
   };
 
   // Get types that have keys
-  const typesWithKeys = (Object.keys(keysByType) as RedisKeyType[]).filter(
-    (type) => type !== 'none' && keysByType[type].length > 0
+  const typesWithKeys = (Object.keys(keysByType) as Array<keyof KeysByType>).filter(
+    (type) => keysByType[type] && keysByType[type].length > 0
   );
 
   if (typesWithKeys.length === 0) {

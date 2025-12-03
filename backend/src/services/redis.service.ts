@@ -1,4 +1,4 @@
-import Redis from 'ioredis';
+import { Redis } from 'ioredis';
 import type {
   ConnectionConfig,
   TestConnectionResult,
@@ -172,7 +172,7 @@ export async function scanKeys(
     
     // Get metadata for each key
     const keys: KeyInfo[] = await Promise.all(
-      rawKeys.map(async (name) => {
+      rawKeys.map(async (name: string) => {
         const type = await getKeyType(client, name);
         const ttl = await client.ttl(name);
         const size = await getKeySize(client, name, type);
@@ -227,7 +227,7 @@ export async function getListValue(
       client.lrange(key, start, stop),
     ]);
     
-    const items = values.map((value, i) => ({
+    const items = values.map((value: string, i: number) => ({
       index: start + i,
       value,
     }));
@@ -342,7 +342,7 @@ export async function getStreamValue(
     const length = await client.xlen(key);
     const rawMessages = await client.xrange(key, start, end, 'COUNT', count);
     
-    const messages: StreamMessage[] = rawMessages.map(([id, fieldsArray]) => {
+    const messages: StreamMessage[] = rawMessages.map(([id, fieldsArray]: [string, string[]]) => {
       // Parse timestamp from ID (format: timestamp-sequence)
       const timestamp = parseInt(id.split('-')[0] || '0', 10);
       
