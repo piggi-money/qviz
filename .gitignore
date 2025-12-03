@@ -1,0 +1,170 @@
+# ================================
+# Dependencies
+# ================================
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+
+# ================================
+# Build outputs
+# ================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+
+# ================================
+# TypeScript
+# ================================
+*.tsbuildinfo
+*.d.ts.map
+
+# ================================
+# Environment variables
+# ================================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env*.local
+
+# ================================
+# IDE & Editors
+# ================================
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.swn
+*~
+.project
+.classpath
+.settings/
+
+# ================================
+# OS generated files
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ================================
+# Logs
+# ================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ================================
+# Testing
+# ================================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+jest-results/
+
+# ================================
+# Cache
+# ================================
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+*.cache
+.turbo/
+.vercel/
+.netlify/
+
+# ================================
+# Vite
+# ================================
+*.local
+vite.config.ts.timestamp-*
+
+# ================================
+# Docker
+# ================================
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ================================
+# Temporary files
+# ================================
+tmp/
+temp/
+.tmp/
+.temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ================================
+# Debug
+# ================================
+.debug/
+debug.log
+*.debug
+
+# ================================
+# Package manager locks (keep one)
+# ================================
+# Uncomment the ones you don't use:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ================================
+# Misc
+# ================================
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+.npm/
+.node_repl_history
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ================================
+# Optional: Local config files
+# ================================
+# config.local.js
+# config.local.json
+# *.local.js
+# *.local.json
+
+# ================================
+# Frontend specific (public folder in backend)
+# This is generated from frontend build
+# ================================
+backend/public/
+
+# ================================
+# Redis dump
+# ================================
+dump.rdb
+*.rdb
